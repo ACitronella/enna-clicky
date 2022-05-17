@@ -2,6 +2,11 @@
 
 I just like when Enna swear. I hope you like them too.
 
+## Inspired by
+
+- Enna's swears
+- [I'm Pomu](https://impomu.com/)
+
 ## Sound sources
 
 - [Aloupeeps discord server](https://discord.gg/enna)
