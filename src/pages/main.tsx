@@ -24,11 +24,12 @@ class Main extends Component<{}, MainStates>{
     generateEnna(){
         console.log("showing enna");
         const ennas = this.state.ennas;
-        ennas.push(<EnnaPopUp x={randomInt(0, window.innerWidth)} y={randomInt(0, window.innerHeight)} sound_idx={randomInt(0, SOUNDS.length)}/>);
+        const sound_idx = randomInt(0, SOUNDS.length);
+        ennas.push(<EnnaPopUp x={randomInt(0, window.innerWidth)} y={randomInt(0, window.innerHeight)} sound_idx={sound_idx}/>);
         this.setState({
             ennas: ennas
         });
-        
+
         setTimeout(() => {
             console.log("removing enna");
             let ennas = this.state.ennas;
@@ -36,7 +37,7 @@ class Main extends Component<{}, MainStates>{
             this.setState({
                 ennas: ennas
             });
-        }, 2000);
+        }, SOUNDS[sound_idx].duration*1000);
     }
 
     render() {
@@ -48,8 +49,9 @@ class Main extends Component<{}, MainStates>{
                 <div>
                     {this.state.ennas}
                 </div>
-                <a href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow">Enna's youtube channel</a>
-                <a href="https://twitter.com/EnnaAlouette">Enna's twitter</a>
+                <a href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow">Enna's youtube channel</a><br />
+                <a href="https://twitter.com/EnnaAlouette">Enna's twitter</a><br />
+                <a href="https://github.com/ACitronella/enna-clicky">This github repo</a>
             </div>
         );
     }
