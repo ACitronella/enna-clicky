@@ -1,6 +1,7 @@
 # Enna-Clicky
 
 I just like when Enna swear. I hope you like them too.
+[Try](https://acitronella.github.io/enna-clicky/)
 
 ## Inspired by
 
