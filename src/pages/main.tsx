@@ -29,7 +29,7 @@ class Main extends Component<{}, MainStates>{
         this.setState({
             ennas: ennas
         });
-
+        console.log(SOUNDS[sound_idx].duration*1000);
         setTimeout(() => {
             console.log("removing enna");
             let ennas = this.state.ennas;
