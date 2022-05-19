@@ -7,7 +7,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Main/>}/>
+                <Route path="/enna-clicky" element={<Main/>}/>
             </Routes>
         </BrowserRouter>
     );

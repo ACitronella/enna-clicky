@@ -5,7 +5,7 @@ function EnnaPopUp(props: {x:number, y:number, sound_idx:number}) {
     SOUNDS[props.sound_idx].play();
     return (
         <div className="cantselect">
-            <img src="/Enna_Alouette_Portrait.webp" className="App-logo" alt="logo" style={{
+            <img src="./Enna_Alouette_Portrait.webp" className="App-logo" alt="logo" style={{
                 position: "fixed",
                 top: props.y,
                 right: props.x
