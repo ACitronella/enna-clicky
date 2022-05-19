@@ -41,10 +41,13 @@ class Main extends Component<{}, MainStates>{
 
     render() {
         return (
-            <div className="App" onClick={() => this.generateEnna()}>
-                <header className="App-header">
+            <div className="App" >
+                <div className="App-header">
+                    <button onClick={() => this.generateEnna()}>Spawn Enna to swear at you</button>
+                </div>
+                <div>
                     {this.state.ennas}
-                </header>
+                </div>
                 <a href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow">Enna's youtube channel</a>
                 <a href="https://twitter.com/EnnaAlouette">Enna's twitter</a>
             </div>
