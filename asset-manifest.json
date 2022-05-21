@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/enna-clicky/static/css/main.a36168c0.css",
+    "main.css": "/enna-clicky/static/css/main.cb5573e4.css",
     "main.js": "/enna-clicky/static/js/main.9cc92550.js",
     "static/js/787.07a8334f.chunk.js": "/enna-clicky/static/js/787.07a8334f.chunk.js",
     "index.html": "/enna-clicky/index.html",
-    "main.a36168c0.css.map": "/enna-clicky/static/css/main.a36168c0.css.map",
+    "main.cb5573e4.css.map": "/enna-clicky/static/css/main.cb5573e4.css.map",
     "main.9cc92550.js.map": "/enna-clicky/static/js/main.9cc92550.js.map",
     "787.07a8334f.chunk.js.map": "/enna-clicky/static/js/787.07a8334f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a36168c0.css",
+    "static/css/main.cb5573e4.css",
     "static/js/main.9cc92550.js"
   ]
 }
