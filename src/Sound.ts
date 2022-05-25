@@ -9,7 +9,8 @@ const SOUNDS = [
     new Audio("enna_voice/Enna_ValleyGirl-FckingBtch.mp3"),
     new Audio("enna_voice/Feck_you_man_youre_banned_from_Nijisamazon.mp3"),
     new Audio("enna_voice/StopLivingInYourMothersBasement.mp3"),
-    new Audio("enna_voice/Useless2.mp3")
+    new Audio("enna_voice/Useless2.mp3"),
+    new Audio("enna_voice/Fuckin_Bitch.mp3"),
 ];
 
 export default SOUNDS;
