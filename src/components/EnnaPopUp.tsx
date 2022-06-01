@@ -1,8 +1,5 @@
-import SOUNDS from "../Sound";
 
-function EnnaPopUp(props: {x:number, y:number, sound_idx:number}) {
-    console.log(props);
-    SOUNDS[props.sound_idx].play();
+function EnnaPopUp(props: {x:number, y:number}) {
     return (
         <div className="cantselect">
             <img src="Enna_Alouette_Portrait.webp" className="App-logo" alt="logo" style={{

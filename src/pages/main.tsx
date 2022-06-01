@@ -29,21 +29,25 @@ class Main extends Component<{}, MainStates>{
         console.log("showing enna");
         const ennas = this.state.ennas;
         const sound_idx = randomInt(0, SOUNDS.length);
-        console.log(SOUNDS[sound_idx].duration*1000);
-
-        ennas.push(<EnnaPopUp x={randomInt(0, window.innerWidth)} y={randomInt(0, window.innerHeight)} sound_idx={sound_idx}/>);
-        this.setState({
-            ennas: ennas,
-            ennaCount: this.state.ennaCount + 1
-        }, () => {
-            setTimeout(() => {
-                console.log("removing enna");
-                let ennas = this.state.ennas;
-                ennas.shift();
-                this.setState({
-                    ennas: ennas
-                });
-            }, SOUNDS[sound_idx].duration*1000);
+        const noise = new Audio(SOUNDS[sound_idx]);
+        ennas.push(<EnnaPopUp x={randomInt(0, window.innerWidth)} y={randomInt(0, window.innerHeight)}/>);
+        noise.addEventListener("loadeddata", () => {
+            noise.volume = 0.2
+            noise.play();
+            console.log(noise.duration);
+            this.setState({
+                ennas: ennas,
+                ennaCount: this.state.ennaCount + 1
+            }, () => {
+                setTimeout(() => {
+                    console.log("removing enna");
+                    let ennas = this.state.ennas;
+                    ennas.shift();
+                    this.setState({
+                        ennas: ennas
+                    });
+                }, noise.duration*1000);
+            });
         });
     }
 
@@ -53,7 +57,7 @@ class Main extends Component<{}, MainStates>{
                 <div className="App-header">
                     {this.state.ennaCount}
                     <button onClick={this.generateEnna}>Spawn Enna to swear at you</button>
-                    <RepeatThis intervalms={5000} fn={() => {
+                    <RepeatThis intervalms={500} fn={() => {
                         console.log("update localstorage, set ennaCount to", this.state.ennaCount);
                         localStorage.setItem("ennaCount", this.state.ennaCount.toString())
                     }}/>
